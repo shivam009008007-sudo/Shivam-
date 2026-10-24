@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#166534"><title>Shivam FMCG Store | Daily Needs, Delivered</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="./"><span class="brand-icon">🛒</span><span><b>Shivam FMCG Store</b><small>Daily needs, delivered</small></span></a>
+  <div class="top-actions"><button class="btn btn-light" id="accountBtn">Login / Sign up</button><button class="btn btn-dark" id="cartOpen">Cart <span id="cartCount">0</span></button></div>
+</header>
+<section class="hero">
+  <div class="hero-copy"><span class="eyebrow">YOUR NEIGHBOURHOOD STORE</span><h1>Ghar ki zaroorat,<br><em>ab ghar par.</em></h1><p>Groceries, snacks, personal care aur daily essentials — sab ek jagah.</p><a href="#shop" class="btn btn-white">Shop now <span>→</span></a><div class="delivery-note">🚚 Convenient local home delivery</div></div>
+  <div class="hero-art"><div class="sun"></div><div class="basket">🧺</div><span class="float f1">🥛</span><span class="float f2">🍎</span><span class="float f3">🥖</span><span class="float f4">🧴</span></div>
+</section>
+<main class="container" id="shop">
+  <div class="section-head"><div><span class="eyebrow green">FRESH PICKS FOR YOU</span><h2>Shop daily essentials</h2></div><span class="muted" id="resultCount"></span></div>
+  <div class="toolbar"><label class="searchbox">🔎 <input id="search" type="search" placeholder="Search atta, oil, biscuits..."></label><div id="categories" class="categories"></div></div>
+  <div id="productGrid" class="product-grid"><div class="loading">Loading products…</div></div>
+  <section class="benefits"><div>🚚<b>Local delivery</b><span>Convenient ordering from home</span></div><div>💚<b>Everyday essentials</b><span>All your basics in one place</span></div><div>🔒<b>Secure account</b><span>Your orders in your account</span></div></section>
+</main>
+<footer><div class="brand footer-brand"><span class="brand-icon">🛒</span><span><b>Shivam FMCG Store</b><small>Apne area ki apni dukaan</small></span></div><div><b>Need help with an order?</b><p>WhatsApp us: <a id="whatsappLink" target="_blank" rel="noopener">7618937346</a></p></div><small>© <span id="year"></span> Shivam FMCG Store</small></footer>
+
+<div class="overlay" id="accountModal"><section class="modal"><button class="close" data-close="accountModal">×</button><div class="modal-brand">🛒 Shivam FMCG Store</div><h2 id="authTitle">Welcome back</h2><p class="muted">Login to place orders and view your order history.</p><div class="auth-tabs"><button class="active" id="loginTab">Login</button><button id="registerTab">Create account</button></div>
+<form id="authForm"><div id="nameWrap" class="field hidden"><label>Your name</label><input name="name" autocomplete="name" minlength="2"></div><div class="field"><label>Email address</label><input name="email" type="email" required autocomplete="email"></div><div class="field"><label>Password</label><input name="password" type="password" required minlength="8" autocomplete="current-password"></div><button class="btn btn-primary full" id="authSubmit">Login</button><p class="message" id="authMessage"></p></form><p class="tiny muted">Admin access is separate and is not shown in the customer menu.</p></section></div>
+
+<div class="overlay" id="cartModal"><section class="modal modal-wide"><button class="close" data-close="cartModal">×</button><h2>Your cart</h2><div id="cartItems"></div><div class="cart-total"><span>Total</span><b id="cartTotal">₹0</b></div><div id="checkoutArea"></div><p class="message" id="orderMessage"></p></section></div>
+<div class="toast" id="toast"></div>
+<script src="./app.js"></script>
+</body></html>
